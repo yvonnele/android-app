@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+C:\Dropbox\KTH\mvk12\android-app\.metadata\.plugins\org.eclipse.jdt.core
+1982827829.index
+277580306.index
