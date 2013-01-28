@@ -20,11 +20,11 @@ public class MainActivity extends Activity {
         
         // Set up our lock button stuff
         isLocked = true;
-        final TextView lockText = (TextView)findViewById(R.id.textView2);
+        final TextView lockText = (TextView)findViewById(R.id.lockText);
         
         final Drawable lockedImg = getResources().getDrawable(R.drawable.locked);
         final Drawable unlockedImg = getResources().getDrawable(R.drawable.unlocked);
-        final ImageButton lockButton = (ImageButton)findViewById(R.id.imageButton1);
+        final ImageButton lockButton = (ImageButton)findViewById(R.id.lockButton);
 		
         final String lockedText = "Locked";
         final String unlockedText = "Unlocked";

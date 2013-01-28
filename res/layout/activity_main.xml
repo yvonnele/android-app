@@ -5,28 +5,19 @@
     tools:context=".MainActivity" >
 
    <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/lockButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textView1"
+        
        />
-        <!--  android:src="@drawable/locked"   -->
 
    <TextView
-       android:id="@+id/textView1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_centerHorizontal="true"
-       android:layout_centerVertical="true"
-       android:text="@string/hello_world" />
-
-   <TextView
-       android:id="@+id/textView2"
+       android:id="@+id/lockText"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_alignLeft="@+id/imageButton1"
        android:layout_below="@+id/imageButton1"
-       android:text="TextView" />
+       />
 
 </RelativeLayout>
