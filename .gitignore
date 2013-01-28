@@ -1,4 +1,4 @@
-lt application files
+# built application files
 *.apk
 *.ap_
 
@@ -26,29 +26,4 @@ proguard/
 *.iml
 *.ipr
 *.iws
-.idea/*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
-*.class
-
-# generated files
-bin/
-gen/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-
-
+.idea/
