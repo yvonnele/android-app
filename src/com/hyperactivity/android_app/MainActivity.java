@@ -1,6 +1,8 @@
 package com.hyperactivity.android_app;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -21,19 +23,19 @@ public class MainActivity extends Activity {
         return true;
     }
     
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public boolean onOptionsItemSelected(MenuItem item) {
     	switch (item.getItemId()) {
         case R.id.menu_settings:
-            // app icon in action bar clicked; go home
-            Intent intent = new Intent(this, SettingsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            return true;
+        	if(Build.VERSION.SDK_INT<Build.VERSION_CODES.HONEYCOMB){
+        		startActivity(new Intent(this, SettingsActivity.class));
+        	}else{
+        		 getFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
+        	}
+                return true;
         default:
             return super.onOptionsItemSelected(item);
+    	}
     }
-    	
-    }
-    
 }

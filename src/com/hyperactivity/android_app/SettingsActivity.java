@@ -1,21 +1,14 @@
 package com.hyperactivity.android_app;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-public class SettingsActivity extends Activity {
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	@SuppressLint("NewApi")
+public class SettingsActivity extends PreferenceActivity {
+    @SuppressWarnings("deprecation")
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Display the fragment as the main content.
-        getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, new SettingsFragment())
-                .commit();
+        addPreferencesFromResource(R.xml.preferences);
     }
 }
